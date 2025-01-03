@@ -1,17 +1,22 @@
-const mongoose= require('mongoose')
-const { string } = require('zod')
-// Todo{
-//     title: string,
-//     description: string
-// }
-mongoose.connect("mongodb+srv://aneeksaha2020:UerhYk04dCYJQARS@cluster0.gmqv4.mongodb.net/to-do")
-const todoSchema=mongoose.Schema({
+const mongoose = require("mongoose");
+
+// mongodb+srv://kirags123:8qPEa8KTKBEh2bss@cluster0.f3qlbuo.mongodb.net/todos
+// .env
+mongoose.connect("mongodb+srv://aneeksaha2020:UerhYk04dCYJQARS@cluster0.gmqv4.mongodb.net/todo")
+const todoSchema = mongoose.Schema({
     title: String,
     description: String,
     completed: Boolean
 })
-const todo=mongoose.model('todos',todoSchema)
 
-module.exports={
+const todo = mongoose.model('todos', todoSchema);
+
+module.exports = {
     todo
 }
+
+
+
+
+
+
